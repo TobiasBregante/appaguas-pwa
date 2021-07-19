@@ -40,6 +40,11 @@
   font-size: .9rem;
   padding-left: 11%;
 }
+.contain-dashboard{
+  justify-content: auto;
+  min-height: 50vh;
+  align-content: auto;
+}
 .contain-dashboard .card-title{
   font-weight: 600;
   font-size: 1.1rem;
@@ -151,4 +156,10 @@
 }
 .cardPendingCustomers .card-body{
   position: relative;
+}
+.containCardsScroller{
+  border-radius: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 40vh;
 }
