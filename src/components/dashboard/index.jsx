@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react"
 import Pending from "./pendings"
 
-const Dashboard = () => {
+const Dashboard = ({ userAttended, setUserAttended }) => {
     const [userSelected, setUserSelected] = useState({})
 
-    useEffect(() => console.log(userSelected))
+    //useEffect(() => console.log(userAttended), [userAttended])
+    useEffect(() => console.log(userAttended), [userAttended])
+
+    const handlerUserAttend = () => {
+        setUserAttended(userSelected && userSelected)
+    }
 
     return(
         <section className="row contain contain-dashboard">
@@ -38,7 +43,7 @@ const Dashboard = () => {
                             </button>
                         </li>
                         <li>
-                            <button className="btn-wait btn-action">
+                            <button className="btn-wait btn-action" onClick={handlerUserAttend}>
                                 <svg 
                                     xmlns="http://www.w3.org/2000/svg" 
                                     fill="currentColor" 

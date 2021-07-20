@@ -44,12 +44,11 @@ const Pending = ({ userSelected, setUserSelected }) => {
                                     </article>
                                     <article className='contain-userDataCard col-8'>
                                         <p>
-                                            {
-                                                
-                                                element.cliente.nombre
-                                            }
-                                        </p>
-                                        <p>
+                                            <span className="d-block cardItemName">
+                                                {       
+                                                    element.cliente.nombre
+                                                }
+                                            </span>
                                             {
                                                 element.cliente.domicilio.calle || 'sin datos'
                                             }

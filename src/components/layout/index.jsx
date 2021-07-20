@@ -8,8 +8,11 @@ import Header from './_header'
 import Home from "../../modules/home"
 import Signin from "../../modules/signin"
 import Dashboard from "../../modules/dashboard"
+import { useState } from "react"
 
 const Layout = () => {
+    const [userAttended, setUserAttended] = useState({})
+
     return(
         <>
         <Router>
@@ -22,7 +25,10 @@ const Layout = () => {
                     <Signin/>
                 </Route>
                 <Route path='/dashboard'>
-                    <Dashboard/>
+                    <Dashboard 
+                        userAttended={userAttended} 
+                        setUserAttended={setUserAttended}
+                    />
                 </Route>
             </Switch>
         </Router>
