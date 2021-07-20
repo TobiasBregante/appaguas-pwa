@@ -8,6 +8,7 @@ import Header from './_header'
 import Home from "../../modules/home"
 import Signin from "../../modules/signin"
 import Dashboard from "../../modules/dashboard"
+import Attend from '../../modules/attend'
 import { useState } from "react"
 
 const Layout = () => {
@@ -26,6 +27,12 @@ const Layout = () => {
                 </Route>
                 <Route path='/dashboard'>
                     <Dashboard 
+                        userAttended={userAttended} 
+                        setUserAttended={setUserAttended}
+                    />
+                </Route>
+                <Route path='/attend'>
+                    <Attend
                         userAttended={userAttended} 
                         setUserAttended={setUserAttended}
                     />

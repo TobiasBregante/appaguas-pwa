@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react"
 import Pending from "./pendings"
+import { useHistory  } from 'react-router-dom'
 
 const Dashboard = ({ userAttended, setUserAttended }) => {
     const [userSelected, setUserSelected] = useState({})
-
+    const history = useHistory()
+    
     //useEffect(() => console.log(userAttended), [userAttended])
     useEffect(() => console.log(userAttended), [userAttended])
 
     const handlerUserAttend = () => {
         setUserAttended(userSelected && userSelected)
+        return history.push("/attend")
     }
 
     return(
